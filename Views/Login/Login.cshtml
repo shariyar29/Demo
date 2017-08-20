@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@model Demo.Models.Employee
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    { 
+    <div class="Login">
+        @Html.TextBoxFor(x => x.Ename, new { @placeholder = "Enter Name" })<br />
+        @Html.PasswordFor(x => x.EDOJ, new { @placeholder = "Enter Password" })<br />
+        <button>Login</button>@Html.ActionLink("Sign Up","Index","Home")
+        @ViewBag.msg
+    </div>
+    }
+
+

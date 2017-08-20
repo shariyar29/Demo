@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model Demo.Models.Employee
+
+<h2>Index</h2>
+<div class="Body">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model =>model.Ename,new { @placeholder="Enter Name"})<br />
+        @Html.TextBoxFor(model=>model.Username,new { @placeholder="Enter Username"})<br />
+        @Html.TextBoxFor(model=>model.Password,new { @placeholder="Enter password"})<br />
+        @Html.TextBoxFor(model => model.EDOJ, new { @placeholder = "Enter Date of Joining" })<br />
+        @Html.TextBoxFor(model => model.Edesignation, new { @placeholder = "Enter Designation" })<br />
+        @Html.TextBoxFor(model => model.Edept, new { @placeholder = "Enter Department" })<br />
+        @Html.TextBoxFor(model => model.Ecity, new { @placeholder = "Enter city" })<br />
+        <button>Submit</button> <input type="reset" value="Reset">
+       <div style="color:red;">
+           @ViewBag.msg @*calling from controller*@
+           @ViewBag.msg1
+        
+    </div>
+    }
+
+</div>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+}
+@*@model Demo.Models.Employee*@
+@model List<Demo.Models.Employee>
+
+   <table class="table">
+    <thead>
+        <tr>
+            <th>EID</th>
+            <th>Name</th>
+            <th>DOJ</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var items in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(x => items.EID)</td>
+                <td>@Html.DisplayFor(x => items.Ename)</td>
+                <td>@Html.DisplayFor(x=> items.Username)</td>
+                <td>@Html.DisplayFor(x=>items.Password)</td>
+                <td>@Html.DisplayFor(x => items.EDOJ)</td>
+                <td>@Html.DisplayFor(x => items.Edesignation)</td>
+                <td>@Html.DisplayFor(x=>items.Edept)</td>
+                <td>@Html.DisplayFor(x=> items.Ecity)</td>
+               <td>@Html.ActionLink("Edit", "Edit", "Home", new { id = @items.EID }, null)</td> 
+                <td><input type="button" class="btn btn-default" value="Edit" onclick="window.location.href='@Url.Action("Edit", "Home", new { id = @items.EID })'" /></td>
+            </tr>
+
+        }
+        </tbody>
+    </table>
+
+
+
+
