@@ -16,11 +16,11 @@ namespace Demo.Models
     {
         public int EID { get; set; }
         public string Ename { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string EDOJ { get; set; }
         public string Edesignation { get; set; }
         public string Edept { get; set; }
         public string Ecity { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
     }
 }

@@ -7,11 +7,21 @@
 @model Demo.Models.Employee
     @using (Html.BeginForm("Login", "Login", FormMethod.Post))
     { 
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @*@if(@ViewBag.msg !=null)
+        {
+            <div stye="color:red">@ViewBag.msg</div>
+        }*@
     <div class="Login">
-        @Html.TextBoxFor(x => x.Ename, new { @placeholder = "Enter Name" })<br />
-        @Html.PasswordFor(x => x.EDOJ, new { @placeholder = "Enter Password" })<br />
+        @Html.HiddenFor(x=>x.EID)
+        @Html.TextBoxFor(x => x.Username, new { @placeholder = "Enter Name" })<br />
+        @Html.ValidationMessageFor(a=>a.Username)
+        @Html.PasswordFor(x => x.Password, new { @placeholder = "Enter Password" })<br />
+        @Html.ValidationMessageFor(x=>x.Password)
         <button>Login</button>@Html.ActionLink("Sign Up","Index","Home")
-        @ViewBag.msg
+        @ViewBag.succ
+        
     </div>
     }
 

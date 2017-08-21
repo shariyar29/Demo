@@ -10,7 +10,7 @@ namespace Demo.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        DemoEntities1 db = new DemoEntities1();
+        DemoEntities4 db = new DemoEntities4();
         public ActionResult Index()
         {
             return View();
@@ -55,8 +55,8 @@ namespace Demo.Controllers
             evalue.Edept = e.Edept;
             evalue.Ecity = e.Ecity;
             db.SaveChanges();
-            ViewBag.Success = "Update Successfull";
-            return View();
+            ViewBag.Success = "Updated Successfull";
+            return RedirectToAction("Display","Home");
         }
     }
 }

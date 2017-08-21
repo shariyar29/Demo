@@ -5,13 +5,13 @@
       <PropertyRef Name="EID" />
     </Key>
     <Property Name="EID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ename" Type="nvarchar(max)" />
-    <Property Name="EDOJ" Type="nvarchar(max)" />
-    <Property Name="Edesignation" Type="nvarchar(max)" />
-    <Property Name="Edept" Type="nvarchar(max)" />
-    <Property Name="Ecity" Type="nvarchar(max)" />
-    <Property Name="Username" Type="nvarchar(max)" />
-    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Ename" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDOJ" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edesignation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ecity" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="DemoModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />

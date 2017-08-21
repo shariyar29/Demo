@@ -5,15 +5,15 @@
       <PropertyRef Name="EID" />
     </Key>
     <Property Name="EID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="EDOJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Edesignation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Edept" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Ecity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDOJ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Edesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Edept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ecity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="DemoEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DemoEntities4" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Employees" EntityType="Self.Employee" />
   </EntityContainer>
 </Schema>

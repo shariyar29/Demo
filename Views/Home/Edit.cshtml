@@ -7,15 +7,16 @@
 @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
 {
     <br /><br />
-    @*@Html.DisplayFor(x=>x.EID)<br />*@
+    @Html.HiddenFor(x=>x.EID)<br />
+    @Html.TextBoxFor(x => x.Ename,new {@placeholder="Name" })<br />
     @Html.TextBoxFor(x => x.Username,new {@placeholder="Username" })<br />
-    @Html.TextBoxFor(x => x.Password,new {@placeholder="Password" })<br />
-    @Html.TextBoxFor(x => x.Ename,new { @placeholder="Employee Name"})<br />
+    @Html.TextBoxFor(x => x.Password,new { @placeholder="Password"})<br />
     @Html.TextBoxFor(x => x.EDOJ,new { @placeholder="Date of joining"})<br />
     @Html.TextBoxFor(s => s.Edesignation,new { @placeholder="Designation"})<br />
     @Html.TextBoxFor(x => x.Edept,new { @placeholder="Department"})<br />
     @Html.TextBoxFor(x => x.Ecity,new { @placeholder="City"})<br />
     <button>Update</button>
+    <div style="color:red">@ViewBag.Success</div>
 }
 
 
