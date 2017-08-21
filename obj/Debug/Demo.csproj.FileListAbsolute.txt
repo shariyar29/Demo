@@ -55,3 +55,4 @@ C:\Users\Shariyar\Documents\Visual Studio 2015\Projects\Demo\Demo\obj\Debug\Demo
 C:\Users\Shariyar\Documents\Visual Studio 2015\Projects\Demo\Demo\obj\Debug\Demo.pdb
 C:\Users\Shariyar\Documents\Visual Studio 2015\Projects\Demo\Demo\bin\EntityFramework.SqlServer.dll
 C:\Users\Shariyar\Documents\Visual Studio 2015\Projects\Demo\Demo\bin\EntityFramework.SqlServer.xml
+C:\Users\Shariyar\Documents\Visual Studio 2015\Projects\Demo\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache

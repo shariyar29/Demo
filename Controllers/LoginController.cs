@@ -24,8 +24,8 @@ namespace Demo.Controllers
                 var ob = db.Employees.Where(a => a.Username.Equals(obj.Username) && a.Password.Equals(obj.Password)).FirstOrDefault();
                 if(ob !=null)
                 {
-                    Session["EID"] = ob.EID.ToString();
-                    Session["Username"] = ob.Username.ToString();
+                    Session["EID"] = obj.EID.ToString();
+                    Session["Username"] = obj.Username.ToString();
                     ViewBag.succ = "Logged In";
                     return RedirectToAction("Display", "Home");
                 }
